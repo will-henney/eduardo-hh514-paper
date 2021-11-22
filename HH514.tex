@@ -49,9 +49,9 @@
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{hyperref}
-\usepackage{caption}
+% \usepackage{caption}
 \usepackage{adjustbox}
-\usepackage{subcaption}
+% \usepackage{subcaption}
 \usepackage{rotating}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -146,27 +146,31 @@ Date & $\Delta \lambda$& Exp. time  &Seeing &Airmass\\
 
 
 \begin{figure*}
-  \begin{subfigure}{6cm}
+  \begin{minipage}{6cm}
     \centering\includegraphics[height=2cm,width=\columnwidth]{2D_3729.pdf}
-    \caption{[O\thinspace II] $\lambda 3729$.}
-  \end{subfigure}
-  \begin{subfigure}{6cm}
+    \centerline{(a) [O\thinspace II] $\lambda 3729$.}
+    \smallskip
+  \end{minipage}
+  \begin{minipage}{6cm}
     \centering\includegraphics[height=2cm,width=\columnwidth]{2D_4959.pdf}
-    \caption{[O\thinspace III] $\lambda 4959$.}
-  \end{subfigure}
+    \centerline{(b) [O\thinspace III] $\lambda 4959$.}
+    \smallskip
+  \end{minipage}
  
-  \begin{subfigure}{6cm}
+  \begin{minipage}{6cm}
     \centering\includegraphics[height=2cm , width=\columnwidth]{2D_6300.pdf}
-    \caption{[O\thinspace I] $\lambda 6300$.}
-  \end{subfigure}
-  \begin{subfigure}{6cm}
+    \centerline{(c) [O\thinspace I] $\lambda 6300$.}
+    \smallskip
+  \end{minipage}
+  \begin{minipage}{6cm}
     \centering\includegraphics[height=2cm , width=\columnwidth]{2D_4649.pdf}
-    \caption{O\thinspace II $\lambda 4649$.}
-  \end{subfigure}
-\begin{subfigure}{12.0cm}
-\centering\includegraphics[height=4cm, width=\columnwidth]{2D_4658_cuts_named.pdf}
-\caption{[Fe\thinspace III] $\lambda 4658$.} 
-\end{subfigure}
+    \centerline{(d) O\thinspace II $\lambda 4649$.}
+    \smallskip
+  \end{minipage}
+\begin{minipage}{12.0cm}
+  \centering\includegraphics[height=4cm, width=\columnwidth]{2D_4658_cuts_named.pdf}
+  \centerline{(e) [Fe\thinspace III] $\lambda 4658$.} 
+\end{minipage}
 
 \caption{\textit{Upper panels:} Sample of representative lines in the bi-dimensional spectrum. The Y axis corresponds to the spatial direction (up north, down south, see Fig.~\ref{fig:hst} for the spatial location of the slit) while the X axis is the spectral axis. All figures are centred at $\lambda_0$, the rest-frame reference wavelength of each line. \textit{Bottom panel:} Emission of the [Fe\thinspace III] $\lambda 4658.17$ line as well as the limits and extension of the different spatial cuts selected to analyse each velocity component. Cut 1 is at the bottom, which corresponds to the southernmost one. The spatial coverage is 2.71 arcsec, 4.18 arcsec and 2.46 arcsec for cuts 1, 2 and 3, respectively. The velocity scale is heliocentric.}
 \label{fig:cuts}
@@ -789,7 +793,7 @@ Asi que exploremos ese punto. Si disminuye el valor de $\frac{\Omega(6312)+\Omeg
 
 Tomaremos como punto de partida a HH514I. Contrario a lo esperado en la estratificacion de temperaturas, T(SIII)<T(OIII). Para que T(SIII)=T(OIII), $\Omega(9531)+\Omega(9069)+\Omega(8829)$  tienen que ser un 40\% mas altas (usando como base GRHK14, el cual esta cerca de la mediana de los valores que otorgan los demas datos). Esto bajaria la abundancia de S++ de HH514, hasta 7.25, aun .25 dex mayor a la abundancia total de S esperada en la nebulosa de orion. Aumentar mas las omegas mencionadas, haria que T(SIII)>T(OIII). Pero T(SIII) no puede ser mucho mayor que T(OIII) ya que se ha observado en la Nebulosa de Orion, ambos iones S++ y O++ coexisten en grandes volumenes.
 
-Entonces un cambio del 40\% podria ser un limite a los cambios en las Omegas.Este mismo cambio hace que T(SIII) sea consistente con T(OIII) en HH514II y baja la abundancia de S++ a 7.14. Sin embargo, los cambios en las omegas, aplicados al espectro nebular, implicarian que T(SIII) es consistente con la temperatura de la zona de bajo grado de ionizacion. Esto implicaria que $S=6.73 \pm 0.06$ (usando ICF de S proviene de Stasinska 1978). lo que implicaria que S/O=$-1.75 \pm 0.06$. Lo que es totalmente inconsistente con el valor solar de S= −1.58  0.08 ! Por lo que los datos atomicos no son responsables de este problema.
+Entonces un cambio del 40\% podria ser un limite a los cambios en las Omegas.Este mismo cambio hace que T(SIII) sea consistente con T(OIII) en HH514II y baja la abundancia de S++ a 7.14. Sin embargo, los cambios en las omegas, aplicados al espectro nebular, implicarian que T(SIII) es consistente con la temperatura de la zona de bajo grado de ionizacion. Esto implicaria que $S=6.73 \pm 0.06$ (usando ICF de S proviene de Stasinska 1978). lo que implicaria que S/O=$-1.75 \pm 0.06$. Lo que es totalmente inconsistente con el valor solar de \(\text{S} = -1.58  \pm 0.08\) ! Por lo que los datos atomicos no son responsables de este problema.
 
 
 
@@ -821,23 +825,23 @@ Entonces un cambio del 40\% podria ser un limite a los cambios en las Omegas.Est
 \section{Some extra material}
 
 \begin{figure*}
-  \begin{subfigure}{7.5cm}
+  \begin{minipage}{7.5cm}
     \centering\includegraphics[height=4cm,width=\columnwidth]{HH514I.png}
-    \caption{Cut~1, HH~514~I.}
-  \end{subfigure}
-  \begin{subfigure}{7.5cm}
+    \centerline{(a) Cut~1, HH~514~I.}
+  \end{minipage}
+  \begin{minipage}{7.5cm}
      \centering\includegraphics[height=4cm,width=\columnwidth]{HH514II.png}
-    \caption{Cut~2, HH~514~II.}
-  \end{subfigure}
+    \centerline{(b) Cut~2, HH~514~II.}
+  \end{minipage}
  
-  \begin{subfigure}{7.5cm}
+  \begin{minipage}{7.5cm}
    \centering\includegraphics[height=4cm,width=\columnwidth]{neb_cut2.png}
-   \caption{Cut~2, nebular component.}
-  \end{subfigure}
-  \begin{subfigure}{7.5cm}
+   \centerline{(c) Cut~2, nebular component.}
+  \end{minipage}
+  \begin{minipage}{7.5cm}
     \centering\includegraphics[height=4cm,width=\columnwidth]{neb_cut3.png}
-    \caption{Cut~3, nebular component.}
-  \end{subfigure}
+    \centerline{(d) Cut~3, nebular component.}
+  \end{minipage}
   \caption{Plasma diagnostic plots for the individual analyzed components.}
 \label{fig:plasma}
 \end{figure*}
@@ -923,3 +927,8 @@ Diagnostic &  HH514-I & Nebula & HH514-II  & Nebula & Prediction\\
 \end{table*}
 
 
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
