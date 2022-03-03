@@ -46,6 +46,7 @@
 
 % Only include extra packages if you really need them. Common packages are:
 \usepackage{graphicx}	% Including figure files
+\let\Bbbk\relax
 \usepackage{amsmath}	% Advanced maths commands
 \usepackage{amssymb}	% Extra maths symbols
 \usepackage{hyperref}
@@ -65,6 +66,11 @@
 \newcommand{\cesar}[1]{{\color{red}C: #1}}
 \newcommand{\will}[1]{{\color{violet}K: #1}}
 
+% A better \ion command that works in more circumstances
+\newcommand\ION[2]{#1\,\scalebox{0.9}[0.8]{\uppercase{#2}}}
+\newcounter{ionstage}
+\renewcommand{\ion}[2]{\setcounter{ionstage}{#2}% 
+  \ensuremath{\mathrm{#1\,\scriptstyle\Roman{ionstage}}}}
 \newcommand\hii{\ion{H}{2}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -129,7 +135,29 @@ and figures as supporting material.
 
 \begin{figure*}
 \includegraphics[width=\textwidth]{hh514-finding}
-\caption{Aqui va imagen de HST}
+\caption{
+  Location of HH~514 within the inner Orion Nebula,
+  showing the position and orientation of the UVES spectrograph slit
+  (dashed green outline).
+  High mass OB stars are labeled in blue,
+  prominent proplyds are labeled in white,
+  and components of Herbig-Haro flows
+  from \citet{Odell15}
+  are labeled in yellow.
+  Background image is a composite of narrow-band observations
+  with \textit{HST} in the [\ion{o}{3}] \(\lambda 5007\) line
+  obtained at 3 different epochs over a span of 22 years:
+  1994 (red channel),
+  2004 (green channel),
+  2016 (blue channel).
+  All images are aligned to the astrometric frame defined in
+  \citep{Robberto:2013a}
+  and have been high-pass filtered with a Gaussian kernel of
+  width 1~arcsec to suppress large-scale brightness variations.
+  Stationary emission features appear yellow in this image,
+  while moving features show a prism-like separation:
+  red-green-blue, with blue indicating the leading edge.
+}
 \label{fig:hst}
 \end{figure*} 
 
