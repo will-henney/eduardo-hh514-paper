@@ -72,6 +72,14 @@
 \renewcommand{\ion}[2]{\setcounter{ionstage}{#2}% 
   \ensuremath{\mathrm{#1\,\scriptstyle\Roman{ionstage}}}}
 \newcommand\hii{\ion{H}{2}}
+\newcommand\siii{[\ion{S}{3}]}
+% Chemical formulae
+\newcommand*\chem[1]{\ensuremath{\mathrm{#1}}}
+% Atomic term symbols
+\newcommand\Config[1]{\ensuremath{\mathrm{#1}}}
+\newcommand\Term[3]{\ensuremath{\mathrm{#1\ ^{#2}#3}}}
+\newcommand\Level[4]{\ensuremath{\mathrm{#1\ ^{#2}#3_{#4}}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
@@ -521,12 +529,13 @@ Ne  & - &$8.17 ^{+0.13} _{-0.11}$&-&$8.26 ^{+0.18} _{-0.14}$\\
 There are two results for HH~514 included in Tables \ref{tab:pc} and \ref{tab:total_abundances}  that we want to highlight: both components show $T_{\rm e} \text{ ([S\thinspace III])}$ $<$ $T_{\rm e} \text{ ([O\thinspace III])}$, and their S/H ratio is around 0.5 dex higher than the value found in the nebular gas. The abnormally large S abundance seems to rely mainly on the S$^{2+}$ one, which represents 91 per cent of the S/H ratio.
 
 The observed trend of $T_{\rm e} \text{ ([S\thinspace III])}$ goes in the opposite direction to the usual temperature stratification observed in H~II regions and simple photoionization models fail to reproduce the observed results \citep[][]{Binette2012}. On the other hand, the overabundance of S is much too large to be produced by errors in the assumed ICF (the abundance of S$^{2+}$ alone is higher than the total S abundance of the Orion Nebula).
-In order to be sure that the enhanced S abundance is real,
+
+In order to be certain that the enhanced S abundance is real,
 it is necessary to rule out possible systematic errors in the analysis.
 % A first look could make us to suspect that neither $T_{\rm e} \text{ ([S\thinspace III])}$ nor the S$^{2+}$ abundance are real, but the product of errors in some part of our analysis of HH~514.
 To that end, in the following subsections we explore some scenarios that could explain the observed results.
 
-\subsubsection{Errors in    atomic data for analyzing [S\thinspace III] lines?}
+\subsubsection{Errors in atomic data for analyzing [S\thinspace III] lines?}
 \label{subsec:atomic_data}
 
 After analyzing different sets of transition probabilities and collision strengths of different ions, \citet{Juan-de-Dios17} conclude that the derived ionic abundances can have uncertainties of around 0.1-0.2 dex introduced by the atomic data when density is lower than $10^4$ cm$^{-3}$, but they can reach values up to 0.8 dex for higher densities. Since both components of HH~514 have extremely high densities, we expect the uncertainties due to atomic data may be amplified in these objects. Given such expectations, we decided to explore the effect of the atomic data used on the S$^{2+}$ abundance.
@@ -579,10 +588,19 @@ The [S\thinspace III] $I(\lambda 6312)/I(\lambda 9531)$ line intensity ratio is 
 
 Let us suppose that the representative density of the [S\thinspace III] zone is overestimated and its true value is more similar to that of the Orion Nebula. As can be seen in panel (a) of Fig.~\ref{fig:plasma}, this would imply that in the base jet, $T_{\rm e} \text{ ([S\thinspace III])} \approx 10200 \text{ K}$ if $n_{\rm e} \leq 10000 \text{ cm}^{-3}$. However, even assuming that value of $T_{\rm e} \text{ ([S\thinspace III])}$, the S$^{2+}$ abundance would be still overestimated. A $T_{\rm e} \text{ ([S\thinspace III])} \approx 13000 \text{ K}$ would be necessary to obtain a {\it normal} S$^{2+}$ abundance, which can not be achieved with any density value.
 
-\subsubsection{Is the entrained material in HH~514 sulphur-rich?}
+\subsection{Comparison between HH~514 and its associated proplyd}
 \label{subsec:proplyd}
 
-\citet{bally00} identified the origin of the entrained material of HH~514 in an outflow from proplyd 170-337. A plausible hypothesis could be that the photoionized material in the outskirts of 170-337 is sulphur-rich and during the ejection that gave rise to HH~514 that material did not get well mixed with the surrounding gas. In our UVES observations, 170-337 is within Cut~1. We interpolate the nebular emission above and below the zone covered by 170-337 along the slit, so that we can separate the proplyd emission from that of the Orion Nebula. By analyzing the spectrum of 170-337, we obtain  $n_{\rm e}\approx 10^{5.85 \pm 0.20} \text{ cm}^{-3}$ from the $n_{\rm e}$([S\thinspace II]) $\lambda$4069/$\lambda$4076 diagnostic (no [Fe\thinspace III] emission lines are detected in 170-337). We use those [S\thinspace II] lines -- that originate from the upper levels $^2P$ -- because of their very high critical densities, above the $n_{\rm e}$ value obtained for the proplyd. In Fig.~\ref{fig:density_map} we show the 2-D density map obtained with MEGARA from the [S\thinspace II] $\lambda$6731/$\lambda$6716 ratio. Lines that come from the intermediate $^2D$ levels of S$^{+}$ and have a considerable lower critical density. In Fig.~\ref{fig:density_map}, we can see that 170-337 shows a rather low contrast with respect to the surroundings, because the emission of [S\thinspace II] $\lambda\lambda$6731, 6716 lines is dominated by the background much lower-density nebular emission. High-density clumps as the proplyd 170-337 can contribute appreciably to the emission of lines arising from the higher levels --as the $T_{\rm e}$-sensitive auroral lines--, which are less affected by collisional deexcitation. The use of incorrect density diagnostics can lead to wrong estimates of physical conditions and chemical abundances \citep[][]{mendez2021-2}. 
+In the previous section, we established that none of the potential systematic biases
+can plausibly cause the observed \siii{} emission from the HH~514 jet,
+leaving an enhanced sulfur abundance as the most likely explanation.
+Given that the ionized base of the jet emerges from the ionization front
+of the proplyd 170-337 \citep{bally00},
+it is important to compare the abundances in the two components.
+% \citet{bally00} identified the origin of the entrained material of HH~514 in an outflow from proplyd 170-337. A plausible hypothesis could be that the photoionized material in the outskirts of 170-337 is sulphur-rich and during the ejection that gave rise to HH~514 that material did not get well mixed with the surrounding gas.
+
+In our UVES observations, 170-337 is within Cut~1. We interpolate the nebular emission above and below the zone covered by 170-337 along the slit, so that we can separate the proplyd emission from that of the Orion Nebula. By analyzing the spectrum of 170-337, we obtain  $n_{\rm e}\approx 10^{5.85 \pm 0.20} \text{ cm}^{-3}$ from the $n_{\rm e}$([S\thinspace II]) $\lambda$4069/$\lambda$4076 diagnostic (no [Fe\thinspace III] emission lines are detected in 170-337). We use those [S\thinspace II] lines -- that originate from the upper levels \chem{^2P} -- because of their very high critical densities, above the $n_{\rm e}$ value obtained for the proplyd.
+In Fig.~\ref{fig:density_map} we show the 2-D density map obtained with MEGARA from the [S\thinspace II] $\lambda$6731/$\lambda$6716 ratio. Lines that come from the intermediate \chem{^2D} levels of \chem{S^{+}} and have a considerable lower critical density. In Fig.~\ref{fig:density_map}, we can see that 170-337 shows a rather low contrast with respect to the surroundings, because the emission of [S\thinspace II] $\lambda\lambda$6731, 6716 lines is dominated by the background much lower-density nebular emission. High-density clumps as the proplyd 170-337 can contribute appreciably to the emission of lines arising from the higher levels --as the $T_{\rm e}$-sensitive auroral lines--, which are less affected by collisional deexcitation. The use of incorrect density diagnostics can lead to wrong estimates of physical conditions and chemical abundances \citep[][]{mendez2021-2}. 
 %The density of 170-337 contrast with Fig.~\ref{fig:density_map}, where the nebular background has not been subtracted to derive $n_{\rm e}$ with the [S\thinspace II] $\lambda$6731/$\lambda$6716 diagnostic. An object as dense as 170-337 has a high rate of collisional de-excitation in the  $^2D$ levels of S$^{+}$, and therefore the [S\thinspace II] emission occurs largely through $\lambda \lambda 4069, 4076$ lines, originated in the higher levels $^2P$. This reinforces that, depending on the physical position within the line of sight and its optical depth, a high-density clump --as 170-337-- can go unnoticed through the [S\thinspace II] $\lambda$6731/$\lambda$6716 ratio, dominated in this case by the nebular emission. 
 
 
