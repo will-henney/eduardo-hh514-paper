@@ -54,6 +54,22 @@
 \usepackage{adjustbox}
 % \usepackage{subcaption}
 \usepackage{rotating}
+
+% WJH 2022-03-24: use the siunitx package for nicer units
+\usepackage{savesym}
+\savesymbol{tablenum}
+\usepackage{siunitx}
+\restoresymbol{SIX}{tablenum}
+\sisetup{
+  % explicit""+" is useful for velocities
+  retain-explicit-plus = true,
+  % prefer 10^6 over 1 x 10^6
+  retain-unity-mantissa = false,
+  % Use x +/- e instead of x(e)  
+  separate-uncertainty = true,
+  % Make sure to pick up bold font when used in section heading for instance
+  detect-weight = true,
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
@@ -599,7 +615,13 @@ of the proplyd 170-337 \citep{bally00},
 it is important to compare the abundances in the two components.
 % \citet{bally00} identified the origin of the entrained material of HH~514 in an outflow from proplyd 170-337. A plausible hypothesis could be that the photoionized material in the outskirts of 170-337 is sulphur-rich and during the ejection that gave rise to HH~514 that material did not get well mixed with the surrounding gas.
 
-In our UVES observations, 170-337 is within Cut~1. We interpolate the nebular emission above and below the zone covered by 170-337 along the slit, so that we can separate the proplyd emission from that of the Orion Nebula. By analyzing the spectrum of 170-337, we obtain  $n_{\rm e}\approx 10^{5.85 \pm 0.20} \text{ cm}^{-3}$ from the $n_{\rm e}$([S\thinspace II]) $\lambda$4069/$\lambda$4076 diagnostic (no [Fe\thinspace III] emission lines are detected in 170-337). We use those [S\thinspace II] lines -- that originate from the upper levels \chem{^2P} -- because of their very high critical densities, above the $n_{\rm e}$ value obtained for the proplyd.
+In our UVES observations, 170-337 is within Cut~1. We interpolate the nebular emission above and below the zone covered by 170-337 along the slit, so that we can separate the proplyd emission from that of the Orion Nebula.
+The line intensities used are shown in Table~\ref{tab:fluxes_proplyd}.
+The complete study of 170-337 will be analyzed in a future paper (M\'endez-Delgado et al., in prep).
+By analyzing the spectrum, we obtain  $n_{\rm e}\approx 10^{5.85 \pm 0.20} \text{ cm}^{-3}$ from the $n_{\rm e}$([S\thinspace II]) $\lambda$4069/$\lambda$4076 diagnostic (no [Fe\thinspace III] emission lines are detected in 170-337). We use those [S\thinspace II] lines -- that originate from the upper levels \chem{^2P} -- because of their very high critical densities, above the $n_{\rm e}$ value obtained for the proplyd.
+This density is close to the value of \SI{1.3e6}{cm^{-3}}
+found by \citet{henney99} for the same proplyd
+from modelling the H\(\alpha\) surface brightness profile. 
 In Fig.~\ref{fig:density_map} we show the 2-D density map obtained with MEGARA from the [S\thinspace II] $\lambda$6731/$\lambda$6716 ratio. Lines that come from the intermediate \chem{^2D} levels of \chem{S^{+}} and have a considerable lower critical density. In Fig.~\ref{fig:density_map}, we can see that 170-337 shows a rather low contrast with respect to the surroundings, because the emission of [S\thinspace II] $\lambda\lambda$6731, 6716 lines is dominated by the background much lower-density nebular emission. High-density clumps as the proplyd 170-337 can contribute appreciably to the emission of lines arising from the higher levels --as the $T_{\rm e}$-sensitive auroral lines--, which are less affected by collisional deexcitation. The use of incorrect density diagnostics can lead to wrong estimates of physical conditions and chemical abundances \citep[][]{mendez2021-2}. 
 %The density of 170-337 contrast with Fig.~\ref{fig:density_map}, where the nebular background has not been subtracted to derive $n_{\rm e}$ with the [S\thinspace II] $\lambda$6731/$\lambda$6716 diagnostic. An object as dense as 170-337 has a high rate of collisional de-excitation in the  $^2D$ levels of S$^{+}$, and therefore the [S\thinspace II] emission occurs largely through $\lambda \lambda 4069, 4076$ lines, originated in the higher levels $^2P$. This reinforces that, depending on the physical position within the line of sight and its optical depth, a high-density clump --as 170-337-- can go unnoticed through the [S\thinspace II] $\lambda$6731/$\lambda$6716 ratio, dominated in this case by the nebular emission. 
 
@@ -611,11 +633,7 @@ In Fig.~\ref{fig:density_map} we show the 2-D density map obtained with MEGARA f
 \end{figure}
 
 
-By adopting the correct density for the ionized layers of 170-337, we obtain $T_{\rm e} \text{ ([O\thinspace III])} \approx T_{\rm e} \text{ ([S\thinspace III])} \approx T_{\rm e} \text{ ([N\thinspace II])} \approx 8000 \pm 1000 \text{ K}$, in total consistency with the expected values for the gas in photoionization equilibrium within the radiation field of the Orion Trapezium. Although the uncertainties associated with the three temperature diagnostics are high, due to the extremely large density of the proplyd, the convergence of the diagnostics ensures the reliability of the derived physical conditions, yielding the adopted temperature $T_{\rm e}=8010 \pm 60$. With the aforementioned physical conditions we obtain $\text{12+log(S/H)} \approx 7.10 \pm 0.04 $ which is consistent with the value derived by \citet{mendez2021-2} for HH~204, representative of the chemical composition of the Orion Nebula. Therefore, the photoionized material of the outer layers of proplyd 170-337 does not show an overabundance of S. However, it is possible that the innermost layers of 170-337 have shaded areas, depending on the orientation of the disk with respect to the ionizing source \citep[see Fig.~5 from][]{henney99}, whose gas conditions may be different and may contribute to the composition of HH~514. The complete study of 170-337 will be analyzed in a future paper (M\'endez-Delgado et al., in prep). The line intensities used to estimate $n_{\rm e}$([S\thinspace II]) ($\lambda\lambda$4069, 4076), $T_{\rm e}$([O\thinspace III]) ($\lambda\lambda$4363, 5007), $T_{\rm e}$([S\thinspace III]) ($\lambda\lambda$6312, 9531), $T_{\rm e}$([N\thinspace II]) ($\lambda\lambda$5755, 6584)   
-and the ionic abundances of S ([S\thinspace II] $\lambda 4069$, [S\thinspace III] $\lambda 9531$) in 170-337 are shown in Table~\ref{tab:fluxes_proplyd}. 
-%In the case of 170-337, no [Fe\thinspace III] emission lines were detected.
-
-%\eduardo{Jorge: a ver que te parece. Es posible que si nos metemos en mucho detalle ya no valdra la pena hacer un paper separado del proplyd, ya que todo estara metido por aqui :p}
+By adopting the correct density for the ionized layers of 170-337, we obtain $T_{\rm e} \text{ ([O\thinspace III])} \approx T_{\rm e} \text{ ([S\thinspace III])} \approx T_{\rm e} \text{ ([N\thinspace II])} \approx 8000 \pm 1000 \text{ K}$, in total consistency with the expected values for the gas in photoionization equilibrium within the radiation field of the Orion Trapezium. Although the uncertainties associated with the three temperature diagnostics are high, due to the extremely large density of the proplyd, the convergence of the diagnostics ensures the reliability of the derived physical conditions, yielding the adopted temperature $T_{\rm e}=\SI{8010 \pm 60}{K}$. With the aforementioned physical conditions we obtain $\text{12+log(S/H)} \approx 7.10 \pm 0.04 $ which is consistent with the value derived by \citet{mendez2021-2} for HH~204, representative of the chemical composition of the Orion Nebula. Therefore, the photoionized material of the outer layers of proplyd 170-337 does not show an overabundance of S.
 
 
 %\jorge{Given that this diagnostic provided a relatively uncertain density in HH514 I and II, it would be interesting to include some words justifying its use in this case (against the use of the [Fe III] diagnostic)} \eduardo{es que no se ven lineas de FeIII en 170-337.}\jorge{Lo suponía, pero no hay que suponer que el lector sea adivino :P. Otra cosa es que el diagnóstico de S II parece bastante incierto en las dos componentes del HH, por lo que asumo que es también el caso en el proplyd. ¿Cómo afectaría esto a la dteerminación de abundancia?}, 
