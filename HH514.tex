@@ -614,19 +614,93 @@ pre-main-sequence evolutionary tracks,
 yielding \SI{0.3}{\msun}  and \SI{0.6}{Myr} respectively \citep{Boyden:2020a}.
 It was one of the first Orion proplyds to be detected
 via the mm-wave dust emission of its protostellar disk \citep{Williams:2005a},
-with an estimated dust mass of \SI{23}{\mearth} \citep{Eisner:2018a}.
+with an estimated dust mass of \SI{23 \pm 5}{\mearth} \citep{Eisner:2018a}.
 The disk has also been detected in the CO 3--2 line \citep{Boyden:2020a},
-yielding a disk radius of \SI{44}{AU}
-(the gas mass cannot be determined because the line is optically thick).
+yielding a disk radius of \SI{44 \pm 4}{AU},
+which is roughly half of the radius of the proplyd ionization front
+(\SI{90}{AU}, \citealp{Henney:1998b}).
+Unfortunately, the gas mass cannot be determined from the CO observations
+because the line is optically thick.
 
+No binary companion to the central star of 170-337 has been detected,
+either spectroscopically \citep{Tobin:2009a}
+or visually \citep{Duchene:2018a}.
+Therefore, it is likely that
+both the proplyd and HH flows originate from the same protostellar disk,
+but the flows must be launched from different radii.
+In the case of the proplyd, an initially neutral photoevaporation flow
+is driven by FUV radiation from the portion of the disk surface where
+the sound speed in the FUV-heated gas (\(\approx \SI{3}{km.s^{-1}}\))
+exceeds the local gravitational escape velocity
+\citep{Johnstone:1998a}.
+For the above-mentioned  stellar mass,
+this implies radii greater than about \SI{30}{AU}
+and up to the outer radius of the disk (\SI{44}{AU}).
+In the case of the jet,
+the much higher flow velocity (\(> \SI{150}{km.s^{-1}}\))
+implies a launch region that is deeper in the gravitational well
+and closer to the star.
+Comparison of magneto-centrifugal jet models
+with observations of the base of HH~212 \citep{Lee:2017r}
+imply that jet launching occurs at disk radii \(< \SI{0.1}{AU}\).
 
-Proper motion and spectroscopic measurements yield
-radial and tangential velocities of
-$v_{r} \sim 153.4 \pm 0.5  \text{ km s}^{-1}$ (this work)
-and $ v_{t} \approx 48 \text{ km s}^{-1}$.
-
+The mass-loss rate from the proplyd photoevaporation flow is estimated
+from model fits to kinematic line profiles \citep{henney99}
+to be \(\approx \SI{8e-7}{\msun.yr^{-1}} \),
+with an uncertainty of roughly a factor of two.
 \citet{Bally:2006a} include HH~514 in a survey of irradiated jets in the Orion Nebula,
-calculating mass loss rate of \SI{6e-7}{\msun.yr^{-1}}.
+calculating a jet mass loss rate of \SI{6e-7}{\msun.yr^{-1}},
+which would make it one of the most massive jets in their survey.
+However, this estimate is based on analysis of the jet knot and therefore
+corresponds to a maximum value of the mass loss,
+presumably during an outburst phase.
+Assuming that the current conditions at the jet base are more typical,
+then a time-averaged jet mass loss can be estimated by scaling the
+result from the proplyd photoevaporation flow.
+Since the densities at the base of the jet and in the proplyd flow are similar
+(section~\ref{sec:physical_cond} and further details in \ref{subsec:proplyd} below),
+the mass loss rate scales as the flow velocity times its solid angle.
+Assuming a jet half opening angle of \ang{5} implies a mean jet mass loss rate
+of \num{0.05} times that of the proplyd,
+yielding \SI{4e-8}{\msun.yr^{-1}} albeit with a large uncertainty.
+
+Proper motion measurements of the jet knot yield a
+plane-of-sky tangential velocity of \SI{45 \pm 6}{km.s^{-1}}
+\citep{odellyhenney08}
+after rescaling to our adopted distance of \SI{410}{pc},
+with a position angle that is consistent with the displacement
+of the knot from 177-341 (almost due north).
+Line-of-sight radial velocities can be determined
+from our spectroscopic measurements and are found to be
+approximately the same for the jet base and the knot,
+with no variation between high and low ionization lines,
+yielding \SI{+150 \pm 5}{km.s^{-1}}.
+Combining these two values gives a jet inclination of \ang{-73 \pm 2}
+to the plane of the sky.
+Note that the brighter northern side of the flow is inclined away from the observer.
+
+Assuming that the jet is perpendicular to the disk,
+then this result implies that the disk must be close to face-on.
+In the disk literature, a different convention is used
+in which the inclination \(i\) is between the rotation axis and the line of sight,
+meaning that our jet results imply \(i = \ang{17}\) for 170-337.
+Studies of the mm continuum and line emission \citep{Eisner:2018a, Boyden:2020a}
+find that the disk has a slight elongation in the north-south direction,
+implying \(i \approx \ang{40}\),
+but this cannot be due to the disk inclination if the jet results are taken
+at face value.
+\citet{Boyden:2020a} derive a very low stellar mass (\(< \SI{0.1}{\msun}\))
+from kinematic disk modelling,
+but rescaling to our more face-on inclination would give \SI{0.3}{\msun},
+which is fully compatible with the mass derived from stellar evolution tracks (see above).
+However, a more serious conflict with the CO kinematics concerns the
+sign and orientation of the velocity gradient,
+which is north-south with blueshifted CO on the north side.
+This is inconsistent with an origin either in a rotating disk
+or in an outflow aligned with the optical jet.
+In the first case, the disk rotation axis would have to be perpendicular to the jet axis.
+In the second case, one would expect redshifted instead of blueshifted CO on the north side.
+
 
 
 \subsection{On the anomalous [S\thinspace III] emission in HH~514}
@@ -758,37 +832,27 @@ which liberates Fe and Ni to the gas phase, while it remains locked within grain
 It is therefore reasonable to suppose that the difference in S abundances
 might also be related to processes involving dust grains.
 
-No binary companion to the central star of 170-337 has been detected,
-either spectroscopically \citep{Tobin:2009a}
-or visually \citep{Duchene:2018a}.
-Therefore, it is likely that
-both the proplyd and HH flows originate from the same protostellar disk,
-but the flows must be launched from different radii.
-In the case of the proplyd, an initially neutral photoevaporation flow
-is driven by FUV radiation from the portion of the disk surface where
-the sound speed in the FUV-heated gas (\SI{\approx 3}{km.s^{-1}})
-exceeds the local gravitational escape velocity
-\citep{Johnstone:1998a}.
-For a stellar mass of \SI{0.3}{\msun} \citep{Boyden:2020a},
-this implies radii greater than about \SI{30}{AU}
-and up to the outer radius of the disk,
-which must lie between \SI{44}{AU}
-(radius of CO emission, \citealp{Boyden:2020a})
-and \SI{90}{AU}
-(radius of ionization front, \citealp{Henney:1998b}).
-In the case of the jet,
-the launch region 
-
-
-Although Fe and Ni abundances may be higher in photoionized HHs  due to destruction of dust grains \citep[][]{Blagrave06, mesadelgado09, mendez2021, mendez2021-2}, the S overabundance in HH~514, would imply that the dust destroyed by the shock front had a large fraction of depleted S. This is an anomalous behaviour in photoionized nebulae, where S is usually assumed to be entirely in the gas phase, although neutral ISM shows some indications of S depletion \citep[][]{Jenkins09}.
+It is common to observe relatively high gas-phase Fe and Ni abundances
+in HH objects, both in photoionized
+\citep[][]{Blagrave06, mesadelgado09, mendez2021, mendez2021-2}
+and neutral \citep{Nisini:2002f, Giannini:2015s}
+environments.
+Depletions with respect to solar abundance of zero to \SI{0.3}{dex} are typically found,
+as compared to a depletion of more than \SI{1}{dex} in the general ISM and \hii{} regions
+\citep{Rodriguez:2002a, Jenkins09}.
+This is usually interpreted as evidence for dust reprocessing in the HH shocks themselves,
+although there is also evidence that some reprocessing must have occurred in
+the jet launch region \citep{Bohm:2001a, Podio:2009a}.
+However, the present study is the first to find a super-solar sulphur abundance in an HH object.
 
 %Understanding the overabundance of S in HH~514 may be important to mapping out the pathway connecting the gaseous S from the ISM of the star forming regions and the rocky S compounds found in our planet. 
-It is well known that planetary formation process is capable of build up large grains in protoplanetary disks \citep[][]{Beckwith2000}. Recently, \citet{Kama19} have suggested the formation of large sulfide mineral reservoirs during the accretion process from the protoplanetary disk to a central star above 1.4 solar masses. The presence of a giant planet immersed in the disk, can cause a pressure bump that can accumulate the largest dust particles \citep{Pinilla2012,Birnstiel16}, among which would be the sulfides, whereas the smaller dust grains and gas can freely flow towards the star \citep[][]{Kama19}.
+It is well known that planetary formation process is capable of build up large grains in protoplanetary disks \citep[][]{Beckwith2000}.
+Recently, \citet{Kama19} have suggested the formation of large sulfide mineral reservoirs during the accretion process from the protoplanetary disk to a central star.
+The presence of a giant planet immersed in the disk, can cause a pressure bump that can accumulate the largest dust particles \citep{Pinilla2012, Birnstiel16}, among which would be the sulfides.
+If some mechanism allowed these sulfide grains to preferentially enter the jet flow from the inner disk,
+and that the grains could subsequently be destroyed,
+then this could explain the high sulphur abundances that we observe in HH~514.
 
-In the hypothetical case of an interaction of HH~514 with a planet-forming disk, the filtered dust grains would be destroyed after the passage of the shock front, releasing the S and the other dust compounds into the gaseous phase. The increase of heavy-element atoms in this small area would stimulate the gas cooling through the emission of CELs. This would be particularly important for $T_{\rm e} \text{ ([S\thinspace III])}$, since the increase in the abundance of S/H would make this area to have an important weight in the integrated conditions along the line of sight. Other diagnostics such as $T_{\rm e} \text{ ([O\thinspace III])}$ can mask the effect since the O abundance would not be importantly affected in the dust destruction zone, since this element forms more volatile compounds. 
-%The confirmation of planet-forming disks in the surrounding environment of HH~514 would be an important discovery. 
-As shown in Figs.~\ref{fig:cuts} and \ref{fig:megara}, the position of 
-the jet base component of HH~514 coincides with 170-337 and, therefore, the S-rich material should come from a shadowed area inside this proplyd. As the same abundance pattern is also seen in the knot, the origin of the material of this last object should be the same. Another scenario that could explain the overabundance of S in HH~514 is the existence of some sort of S-rich pre-stellar cores not related to planetary formation, which would break up during the propagation of the HHs that these objects form.  
 
 %as mentioned in Sec.~\ref{subsec:proplyd}, or S-reservoirs from any of the other nearby proplyds within the flow direction of HH~514. For the latter scenario to take place, a protoplanetary disk should exist behind 170-337 along the line of sight, since HH~514 propagates at an angle of $\sim -72 ^\circ$  with respect to the plane of the sky, in the opposite direction to the observer. 
 
@@ -810,7 +874,7 @@ The aforementioned scenarios merit further investigation. However, regardless of
 \subsection{The total abundances of Fe and Ni}
 \label{subsec:totalFeandNi}
 
-In the jet base component of HH~514 we are able to derive the abundances of Ni$^{+}$, Ni$^{2+}$, Fe$^{+}$ and Fe$^{2+}$. As mentioned in Sec.~\ref{sec:ionic_total_abundances}, despite of only having an upper limit to the abundance of Fe$^{3+}$, the ICF schemes of \citet{rodriguez05} indicate that the total abundance of Fe/H should be close to the sum of the abundances of Fe$^{+}$ and Fe$^{2+}$ and the upper limit of Fe$^{3+}$. Both the total abundances of Ni and Fe in the jet base are a factor 34 higher than in the main emission from the Orion Nebula. Moreover, these values are very close to the reference Solar values from \citet{lodders19}. However, this does not necessarily mean that all the dust grains containing Fe and Ni have been destroyed by the shock. This is also supported by the evidence of thermal dust IR emission from HH~514 \citep{smith05}, which suggests the survival of some amount of dust in the object. In connection with Sec.~\ref{subsec:real_overabundance}, the passage of the shock front associated with HH~514 is able to destroy the dust reservoirs of S in a planet-forming disk. However, HH~514 can also destroy dust grains of zones of the Orion Nebula outside the S  reservoirs, with normal S abundance. To estimate the fraction of Fe released from each kind of dust grains, we can assume that the S excess is produced by the destruction of FeS compounds, as suggested by \citet{Kama19}. In addition, NiS compounds should be present as well. For each atom of S released, one atom of Fe or Ni should be released too. Since the S excess will be equal to the difference between the S abundance in HH~514 and the representative value of the Orion Nebula, then:
+In the jet base component of HH~514 we are able to derive the abundances of Ni$^{+}$, Ni$^{2+}$, Fe$^{+}$ and Fe$^{2+}$. As mentioned in Sec.~\ref{sec:ionic_total_abundances}, despite only having an upper limit to the abundance of Fe$^{3+}$, the ICF schemes of \citet{rodriguez05} indicate that the total abundance of Fe/H should be close to the sum of the abundances of Fe$^{+}$ and Fe$^{2+}$ and the upper limit of Fe$^{3+}$. Both the total abundances of Ni and Fe in the jet base are a factor 34 higher than in the main emission from the Orion Nebula. Moreover, these values are very close to the reference Solar values from \citet{lodders19}. However, this does not necessarily mean that all the dust grains containing Fe and Ni have been destroyed. This is also supported by the evidence of thermal dust IR emission from HH~514 \citep{smith05}, which suggests the survival of some amount of dust in the object. In connection with Sec.~\ref{subsec:real_overabundance}, the passage of the shock front associated with HH~514 is able to destroy the dust reservoirs of S in a planet-forming disk. However, HH~514 can also destroy dust grains of zones of the Orion Nebula outside the S  reservoirs, with normal S abundance. To estimate the fraction of Fe released from each kind of dust grains, we can assume that the S excess is produced by the destruction of FeS compounds, as suggested by \citet{Kama19}. In addition, NiS compounds should be present as well. For each atom of S released, one atom of Fe or Ni should be released too. Since the S excess will be equal to the difference between the S abundance in HH~514 and the representative value of the Orion Nebula, then:
 \begin{equation*}
     \frac{n(\text{S})_{\text{excess}}}{n(\text{H})}\approx\frac{n(\text{Fe+Ni})_{\text{excess}}}{n(\text{H})}\approx\frac{1.05\times n(\text{Fe})_{\text{excess}}}{n(\text{H})}=1.52\times 10^{-5},
 \end{equation*}
