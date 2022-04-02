@@ -97,6 +97,8 @@
 \newcommand\Term[3]{\ensuremath{\mathrm{#1\ ^{#2}#3}}}
 \newcommand\Level[4]{\ensuremath{\mathrm{#1\ ^{#2}#3_{#4}}}}
 
+\newcommand\disk{\ensuremath{_{\mathrm{d}}}}
+
 \DeclareSIUnit\msun{\text{M\ensuremath{_\odot}}}
 \DeclareSIUnit\mearth{\text{M\ensuremath{_\oplus}}}
 \DeclareSIUnit\lsun{\text{L\ensuremath{_\odot}}}
@@ -605,13 +607,20 @@ Ne  & - &$8.17 ^{+0.13} _{-0.11}$&-&$8.26 ^{+0.18} _{-0.14}$\\
 \section{Discussion}
 \label{sec:disc}
 
-\subsection{General properties of the star/disk/outflow system of 170-337/HH~514}
+\subsection{The star/disk/outflow system of 170-337/HH~514}
 \label{sec:general-properties}
+
+In this section we combine results from the literature with those of this study
+to provide a comprehensive view of the multiple components
+that make up the proplyd 170-337 and its outflows. 
+
+\subsubsection{The central star and its disk}
+\label{sec:central-star-disk}
 
 The central star of 170-337 is of spectral type M2e \citep{Hillenbrand:1997a}
 and its mass and age have been determined from fitting to
 pre-main-sequence evolutionary tracks,
-yielding \SI{0.3}{\msun}  and \SI{0.6}{Myr} respectively \citep{Boyden:2020a}.
+yielding \SI{0.3}{\msun} and \SI{0.6}{Myr} respectively \citep{Boyden:2020a}.
 It was one of the first Orion proplyds to be detected
 via the mm-wave dust emission of its protostellar disk \citep{Williams:2005a},
 with an estimated dust mass of \SI{23 \pm 5}{\mearth} \citep{Eisner:2018a}.
@@ -622,27 +631,89 @@ which is roughly half of the radius of the proplyd ionization front
 Unfortunately, the gas mass cannot be determined from the CO observations
 because the line is optically thick.
 
+\subsubsection{Launching regions of the jet and the photoevaporation flow}
+\label{sec:launch-regi-jet}
+
 No binary companion to the central star of 170-337 has been detected,
 either spectroscopically \citep{Tobin:2009a}
 or visually \citep{Duchene:2018a}.
 Therefore, it is likely that
 both the proplyd and HH flows originate from the same protostellar disk,
-but the flows must be launched from different radii.
+but the flows must be launched from very different radii.
+
 In the case of the proplyd, an initially neutral photoevaporation flow
-is driven by FUV radiation from the portion of the disk surface where
-the sound speed in the FUV-heated gas (\(\approx \SI{3}{km.s^{-1}}\))
-exceeds the local gravitational escape velocity
+is driven from the disk surface by FUV radiation from the Trapezium stars
 \citep{Johnstone:1998a}.
-For the above-mentioned  stellar mass,
+For the high radiation fields found in the Orion Nebula,
+the flow is in the supercritical regime \citep{Adams:2004u}
+in which the sound speed in the FUV-heated gas (\(\approx \SI{3}{km.s^{-1}}\))
+exceeds the local gravitational escape velocity at the disk surface.
+For a stellar mass of \SI{0.3}{\msun} (sec.~\ref{sec:general-properties}),
 this implies radii greater than about \SI{30}{AU}
 and up to the outer radius of the disk (\SI{44}{AU}).
+
 In the case of the jet,
-the much higher flow velocity (\(> \SI{150}{km.s^{-1}}\))
+the much higher flow velocity (\(> \SI{100}{km.s^{-1}}\))
 implies a launch region that is deeper in the gravitational well
 and closer to the star.
 Comparison of magneto-centrifugal jet models
 with observations of the base of HH~212 \citep{Lee:2017r}
 imply that jet launching occurs at disk radii \(< \SI{0.1}{AU}\).
+Magnetocentrifugal winds may also be launched from intermediate radii
+of \num{1} to \SI{10}{AU} but these will be at lower velocities
+(e.g., \citealp{Hasegawa:2022j}).
+
+\subsubsection{Kinematics of the star within the Orion Nebula Cluster}
+\label{sec:kinem-star-with}
+
+The line-of-sight radial velocity of the star can be determined from the systemic velocity of the CO emission
+\citep{Boyden:2020a},
+yielding \SI{23.8 \pm 0.1}{km.s^{-1}} after converting to the heliocentric frame.
+This is  \SI{-3.7}{km.s^{-1}} with respect to the mean velocity of stars in the core of Orion
+(\SI{27.5}{km.s^{-1}}, \citealp{Theissen:2022k}).
+The star's tangential velocity in the frame of the cluster can be derived from proper motion measurements \citep{Kim:2019a}
+as \(\SI{7.8 \pm 1.1}{km.s^{-1}}\) along \(\text{PA} = \ang{48 \pm 8}\).
+% 3d velocity of star: 8.6
+% 3d velocity dispersion of cluster: 3.7
+The total space velocity of 170-337 is therefore
+\SI{8.6}{km.s^{-1}},
+which is more than double the 3D velocity dispersion of the cluster
+(\SI{3.7}{km.s^{-1}}; \citealp{Theissen:2022k}),
+making it a candidate for an escaping star.
+It is included in the escape group ESC1 of \citet{Kim:2019a},
+but its total proper motion of \SI{4}{mas.yr^{-1}}
+is not quite high enough to meet the runaway criterion
+used in \citet{McBride:2019a} or \citet{Platais:2020f}.
+
+\subsubsection{Kinematics of the jet}
+\label{sec:kinematics-jet}
+
+Proper motion measurements of the jet knot \citep{odellyhenney08},
+after compensating for the proper motion of the star and
+rescaling to our adopted distance of \SI{410}{pc},
+yield a plane-of-sky tangential velocity of \SI{41 \pm 6}{km.s^{-1}},
+with a position angle that is consistent with the displacement
+of the knot from 177-341 (almost due north).
+Line-of-sight radial velocities can be determined from our spectroscopic measurements
+(see Table~\ref{tab:sample_spectra})
+and are found to be approximately the same for the jet base and the knot,
+with no variation between high and low ionization lines,
+yielding a heliocentric velocity of \SI{+150 \pm 5}{km.s^{-1}}.
+Subtracting the stellar systemic velocity of \SI{24}{km.s^{-1}}
+gives a jet propagation velocity of  \SI{132 \pm 10}{km.s^{-1}}
+at an inclination of \ang{-72 \pm 3} to the plane of the sky.
+Note that the brighter northern side of the flow is inclined away from the observer.
+
+Assuming an ionized sound speed of \SI{11}{km.s^{-1}},
+then the isothermal Mach number of the jet is \num{12}
+and the Mach angle is \ang{4.8},
+which should correspond to the half-opening angle of the ionized portion of the jet
+after it emerges from the proplyd ionization front.
+This is consistent with the observed width of the base of the jet in \textit{HST} images
+(e.g., Fig.~\ref{fig:hst}).
+
+\subsubsection{Mass loss rates of photoevaporation flow and jet}
+\label{sec:mass-loss-rate}
 
 The mass-loss rate from the proplyd photoevaporation flow is estimated
 from model fits to kinematic line profiles \citep{henney99}
@@ -660,47 +731,61 @@ result from the proplyd photoevaporation flow.
 Since the densities at the base of the jet and in the proplyd flow are similar
 (section~\ref{sec:physical_cond} and further details in \ref{subsec:proplyd} below),
 the mass loss rate scales as the flow velocity times its solid angle.
-Assuming a jet half opening angle of \ang{5} implies a mean jet mass loss rate
+Assuming a jet half opening angle of \ang{5} (see previous section)
+implies a mean jet mass loss rate
 of \num{0.05} times that of the proplyd,
 yielding \SI{4e-8}{\msun.yr^{-1}} albeit with a large uncertainty.
+This is similar to but slightly larger than the jet mass-loss rate
+derived for the closer-in proplyd LV~2 (167-317, \citealp{Henney:2002b}).
 
-Proper motion measurements of the jet knot yield a
-plane-of-sky tangential velocity of \SI{45 \pm 6}{km.s^{-1}}
-\citep{odellyhenney08}
-after rescaling to our adopted distance of \SI{410}{pc},
-with a position angle that is consistent with the displacement
-of the knot from 177-341 (almost due north).
-Line-of-sight radial velocities can be determined
-from our spectroscopic measurements and are found to be
-approximately the same for the jet base and the knot,
-with no variation between high and low ionization lines,
-yielding \SI{+150 \pm 5}{km.s^{-1}}.
-Combining these two values gives a jet inclination of \ang{-73 \pm 2}
-to the plane of the sky.
-Note that the brighter northern side of the flow is inclined away from the observer.
+
+
+\subsubsection{Discrepancy between optical jet orientation and CO kinematics}
+\label{sec:discr-betw-optic}
 
 Assuming that the jet is perpendicular to the disk,
-then this result implies that the disk must be close to face-on.
-In the disk literature, a different convention is used
-in which the inclination \(i\) is between the rotation axis and the line of sight,
-meaning that our jet results imply \(i = \ang{17}\) for 170-337.
+then the results of sec.~\ref{sec:kinematics-jet} imply that the disk must be close to face-on.
+In the disk literature, a different inclination convention is used
+in which the \(i\disk\) is the angle between the rotation axis and the line of sight,
+meaning that our jet results imply \(i\disk = \ang{18}\) for 170-337.
 Studies of the mm continuum and line emission \citep{Eisner:2018a, Boyden:2020a}
 find that the disk has a slight elongation in the north-south direction,
-implying \(i \approx \ang{40}\),
-but this cannot be due to the disk inclination if the jet results are taken
-at face value.
+which is interpreted as \(i\disk \approx \ang{40}\),
+but if the jet results are taken at face value
+then this elongation must be an intrinsic asymmetry rather than an inclination effect. 
 \citet{Boyden:2020a} derive a very low stellar mass (\(< \SI{0.1}{\msun}\))
-from kinematic disk modelling,
-but rescaling to our more face-on inclination would give \SI{0.3}{\msun},
-which is fully compatible with the mass derived from stellar evolution tracks (see above).
-However, a more serious conflict with the CO kinematics concerns the
-sign and orientation of the velocity gradient,
-which is north-south with blueshifted CO on the north side.
+from kinematic disk modelling.
+However, this value is highly dependent on the disk inclination
+(\(M \sim (\sin i\disk)^{-2}\)),
+so that rescaling to \(i\disk = \ang{18}\) would give \SI{0.3}{\msun},
+which is fully compatible with the mass derived from stellar evolution tracks
+(see sec.~\ref{sec:central-star-disk} above).
+
+A more serious conflict with the CO kinematics concerns the
+sign and orientation of the observed velocity gradient,
+which runs north-south with blueshifted CO on the north side
+(Figs.~4 and~11 of \citealp{Boyden:2020a}).
 This is inconsistent with an origin either in a rotating disk
 or in an outflow aligned with the optical jet.
 In the first case, the disk rotation axis would have to be perpendicular to the jet axis.
-In the second case, one would expect redshifted instead of blueshifted CO on the north side.
-
+In the second case, one would expect \emph{red}shifted instead of blueshifted CO on the north side.
+Two possible explanations for this discrepancy suggest themselves:
+(1)~the source, despite lack of evidence, may in fact be binary,
+with the optical jet arising from a different star/disk from that seen in CO;
+(2)~the CO emission might arise in neither the disk nor the outflow,
+but instead in in-falling material from the remnants of the surrounding protostellar envelope.
+Both possibilities seem far-fetched,
+but in the second case there is a precedent in observations of larger Orion proplyds,
+where dense neutral filaments are seen within the shadow of the ionization front.
+Examples include 182-413 \citep{Vicente:2013a} and 244-440 \citep{bally00},
+which are likely to represent transitional stages between Evaporating Gaseous Globules
+\citep{Hester:1996w}
+and pure photoevaporating disks.
+Although 170-337 is much smaller, it too may contain remnant envelope material
+that is still accreting onto the central source.
+The same phenomenon may explain asymmetrical dust extinction features
+that are seen in the tails of many proplyds,
+such as 171-340 (see Fig.~\ref{fig:hst}).
 
 
 \subsection{On the anomalous [S\thinspace III] emission in HH~514}
